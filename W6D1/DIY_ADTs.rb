@@ -189,3 +189,5 @@ map.set('Messi', 32)
 p map.map
 map.set('Messi', 40)
 p map.map
+puts "updated value"
+p map.get('Messi')
