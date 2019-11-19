@@ -15,15 +15,14 @@ class GraphNode
         node = queue.shift
         return node if node.value == target
         unless visited.include?(node)
-            neighbor = node.neighbors.shift
-            queue.push(neighbor)
-            visited.push(neighbor)
+          neighbor = node.neighbors.shift
+          queue.push(neighbor)
+          visited.push(neighbor)
         end
     end
     nil
   end
 end
-
 
 a = GraphNode.new('a')
 b = GraphNode.new('b')
@@ -35,5 +34,5 @@ a.neighbors = [b, c, e]
 c.neighbors = [b, d]
 e.neighbors = [a]
 f.neighbors = [e]
-p a.bfs(a, "b")
-p a.bfs(a, "f")
+p a.bfs(a, "b") # => GraphNode of 'b'
+p a.bfs(a, "f") # => nil
