@@ -23,18 +23,22 @@ class Simon
     show_sequence
     require_sequence
     round_success_message unless game_over
-    @sequence_length += 1 #= @sequence_length + 1
+    @sequence_length += 1 unless game_over
   end
 
   def show_sequence
     add_random_color
-    p @seq
+    p @seq.shuffle
   end
 
   def require_sequence
     puts "pick the shown colors one at a time"
     input = gets.chomp
-    game_over = true unless COLORS.include?(input)
+    if seq[0] != input
+      game_over = true
+      game_over_message
+      play
+    end
   end
 
   def add_random_color
@@ -57,4 +61,4 @@ class Simon
 end
 
 game = Simon.new
-game.play
+# game.play
