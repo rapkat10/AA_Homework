@@ -32,7 +32,7 @@ class Simon
   end
 
   def require_sequence
-    puts "pick the shown color"
+    puts "pick the shown color!"
     input = gets.chomp
     if seq[0] != input
       game_over = true
