@@ -1,3 +1,4 @@
+require 'dessert'
 class Chef
   attr_reader :name
 

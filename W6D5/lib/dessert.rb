@@ -7,12 +7,14 @@ require 'active_support/inflector'
 #   'fish'.pluralize    # => 'fish'
 #
 # See https://api.rubyonrails.org/classes/ActiveSupport/Inflector.html#method-i-pluralize
+require 'chef'
 
 class Dessert
-  attr_reader :type, :quantity, :ingredients, :temp
+  attr_reader :type, :quantity, :ingredients, :temp, :chef
+
 
   def initialize(type, quantity, chef)
-    raise ArgumentError unless quantity.is_a?(Integer)
+    raise 'Not an integer' unless quantity.is_a?(Integer)
     @type = type
     @quantity = quantity
     @chef = chef
@@ -38,10 +40,11 @@ class Dessert
   end
 
   def serve
+    @chef = chef.titleize
     "#{@chef.titleize} has made #{@quantity} #{@type.pluralize}!"
   end
 
   def make_more
-    @chef.bake(self)
+    Chef.new(chef).bake(self)
   end
 end
