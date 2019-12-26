@@ -1,0 +1,4 @@
+  [1m[35m (204.7ms)[0m  [1m[35mCREATE DATABASE "Music_Rapp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (149.8ms)[0m  [1m[35mCREATE DATABASE "Music_Rapp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
