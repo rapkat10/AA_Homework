@@ -9,7 +9,9 @@ class User < ApplicationRecord
 
     end
 
-    
+    def reset_session_token
+        
+    end
 
     def ensure_session_token!
         
