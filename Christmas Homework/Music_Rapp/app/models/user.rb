@@ -10,6 +10,10 @@ class User < ApplicationRecord
     end
 
     def password=(password)
+
+    end
+
+    def is_password?(password)
         
     end
 
