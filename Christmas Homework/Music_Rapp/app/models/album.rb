@@ -1,6 +1,6 @@
 class Album < ApplicationRecord
 
-    validates :name, presence: true
+    validates :name, :band_id, presence: true
 
-    
+
 end
