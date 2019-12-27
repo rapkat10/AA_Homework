@@ -1,7 +1,7 @@
 class Track < ApplicationRecord
 
-    validates :name, presence: true
+    validates :name, :ord, presence: true
 
-    
+
 
 end
