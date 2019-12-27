@@ -5,13 +5,11 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token!
 
+    def self.find_by_credentials(email, password)
 
-
-
+    end
 
     
- 
-
 
     def ensure_session_token!
         
