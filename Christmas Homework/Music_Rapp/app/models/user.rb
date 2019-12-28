@@ -3,7 +3,8 @@ class User < ApplicationRecord
     validates :email, :password_digest, :session_token
     validates :password, length: {minumum: 6, allow_nil: true}
 
-    
+    attr_reader :password
+
     after_initialize :ensure_session_token!
 
     def self.find_by_credentials(email, password)
@@ -12,7 +13,8 @@ class User < ApplicationRecord
     end
 
     def password=(password)
-
+        @password = password
+        
     end
 
     def is_password?(password)
