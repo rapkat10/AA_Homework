@@ -18,7 +18,7 @@ class User < ApplicationRecord
     end
 
     def is_password?(password)
-        
+        bcp = (self.password_digest)
     end
 
     def reset_session_token
