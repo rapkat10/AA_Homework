@@ -13,3 +13,65 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-color: rgb(196, 248, 255);
+    display: block;
+    font: snazzy;
+    color: rgb(0, 162, 255);
+    font-size: 15px;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.main-logo {
+    font-size: 60px;
+}
+
+div p1 {
+    color: red;
+}
+
+div p2 {
+    color: green;
+    display: flex;
+    padding-bottom: 5px;
+}
+
+input[value="Sign Out"] {
+    display: flex;
+}
+
+.links .button {
+    padding: 10px;
+    display: block;
+}
+
+.button {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: skyblue;
+    margin-bottom: 20px;
+
+    &:hover {
+        color: white;
+        background-color: dodgerblue;
+        cursor: pointer;
+    }
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: skyblue;
+    margin-bottom: 20px;
+
+    &:hover {
+        color: white;
+        background-color: dodgerblue;
+        cursor: pointer;
+    }
+}

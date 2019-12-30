@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MusicRapp</title>
+    <title>Music Rapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,38 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div>
+      <h1 class='main-logo'>Music Rapp</h1>
+
+      <% if logged_in? %>
+        <a class='button' href="<%= bands_url %>">Take me Home</a>
+        <div>
+          <p2>Logged in as: <%= current_user.email %></p2>
+          <form action=<%= session_url %> method='POST'>
+            <input
+              type="hidden"
+              name="_method"
+              value="DELETE">
+            <input
+              type="hidden"
+              name="authenticity_token"
+              value="<%= form_authenticity_token %>">
+            <input 
+              type="submit" value="Sign Out">
+          </form>
+        </div>
+      
+      <% end %>
+
+      <% if flash[:notice] %>
+        <p><%= flash[:notice] %></p>
+      <% end %>
+
+      <% if flash[:errors] %>
+        <p1><%= flash[:errors].join(", ") %></p1>
+      <% end %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
