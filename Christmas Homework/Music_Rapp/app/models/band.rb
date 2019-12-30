@@ -6,6 +6,16 @@ class Band < ApplicationRecord
         foreign_key: :band_id,
         class_name: :Album
 
+    belongs_to :user,
+        foreign_key: :user_id,
+        class_name: :User
+
+
+    has_many :tracks,
+        through: :albums,
+        source: :tracks
+    
+
 end
 
 # == Schema Information

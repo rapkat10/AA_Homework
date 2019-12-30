@@ -565,3 +565,104 @@ NoMethodError - undefined method `title' for #<Album:0x00007ffa9db36ab0>:
   app/controllers/albums_controller.rb:6:in `show'
 
 Started POST "/__better_errors/74d6bd0901f59e49/variables" for ::1 at 2019-12-29 21:55:06 -0700
+Started GET "/albums/1" for ::1 at 2019-12-29 21:58:46 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cqr7Vrok8BTZ-aAehzeZpg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:5
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::StatementInvalid - PG::UndefinedColumn: ERROR:  column albums.album_id does not exist
+LINE 1: SELECT "albums".* FROM "albums" WHERE "albums"."album_id" = ...
+                                              ^
+: SELECT "albums".* FROM "albums" WHERE "albums"."album_id" = $1:
+  app/views/albums/show.html.erb:3:in `_app_views_albums_show_html_erb___731395868145204750_70357176043400'
+  app/controllers/albums_controller.rb:6:in `show'
+
+Started POST "/__better_errors/1548a1281c54d5b6/variables" for ::1 at 2019-12-29 21:58:46 -0700
+Started GET "/albums/1" for ::1 at 2019-12-29 22:05:24 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cqr7Vrok8BTZ-aAehzeZpg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:5
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.7ms)
+
+
+
+ActiveRecord::StatementInvalid - PG::UndefinedColumn: ERROR:  column albums.album_id does not exist
+LINE 1: SELECT "albums".* FROM "albums" WHERE "albums"."album_id" = ...
+                                              ^
+: SELECT "albums".* FROM "albums" WHERE "albums"."album_id" = $1:
+  app/views/albums/show.html.erb:3:in `_app_views_albums_show_html_erb___731395868145204750_70357176376580'
+  app/controllers/albums_controller.rb:6:in `show'
+
+Started POST "/__better_errors/28d7bca173e61db8/variables" for ::1 at 2019-12-29 22:05:25 -0700
+Started GET "/albums/1" for ::1 at 2019-12-29 22:09:03 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cqr7Vrok8BTZ-aAehzeZpg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:5
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 38.7ms)
+
+
+
+ActiveRecord::StatementInvalid - PG::UndefinedColumn: ERROR:  column albums.album_id does not exist
+LINE 1: SELECT "albums".* FROM "albums" WHERE "albums"."album_id" = ...
+                                              ^
+: SELECT "albums".* FROM "albums" WHERE "albums"."album_id" = $1:
+  app/views/albums/show.html.erb:3:in `_app_views_albums_show_html_erb___731395868145204750_70357183500920'
+  app/controllers/albums_controller.rb:6:in `show'
+
+Started POST "/__better_errors/e537cbcbc2ba83f6/variables" for ::1 at 2019-12-29 22:09:04 -0700
+Started GET "/" for ::1 at 2019-12-29 22:09:22 -0700
+Started GET "/bands" for ::1 at 2019-12-29 22:09:22 -0700
+Processing by BandsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cqr7Vrok8BTZ-aAehzeZpg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:3
+  Rendered bands/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 85ms (Views: 70.3ms | ActiveRecord: 7.0ms)
+
+
+Started DELETE "/session" for ::1 at 2019-12-29 22:09:26 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ICsykDSNW9WJRk3kr7qRUiqYleaRZsBZKYvi4l/hYrr8ZNWgbGO7qlsNS9hmGCd0wRYF+ri39mhZkQ+ENrTwVg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cqr7Vrok8BTZ-aAehzeZpg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:34
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@123.comm"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:34
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "9wjRq6OUX7YaT1CXXqGLFw"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:34
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9wjRq6OUX7YaT1CXXqGLFw"], ["updated_at", "2019-12-30 05:09:26.273324"], ["id", 2]]
+  ↳ app/models/user.rb:34
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:34
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 20ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/session/new" for ::1 at 2019-12-29 22:09:26 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+

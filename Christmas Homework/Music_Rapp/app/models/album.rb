@@ -1,7 +1,7 @@
 class Album < ApplicationRecord
 
     validates :name, :year, presence: true
-    validates :live, inclusion: { in: [true, false] }
+    validates :live, inclusion: [true, false] 
     validates :name, uniqueness: { scope: :band_id }
     validates :year, numericality: { minimum: 1900, maximum: 9000 }
 
