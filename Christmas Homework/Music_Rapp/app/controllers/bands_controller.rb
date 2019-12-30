@@ -1,4 +1,4 @@
-class BandController < ApplicationController
+class BandsController < ApplicationController
     before_action :require_user!
 
     def index

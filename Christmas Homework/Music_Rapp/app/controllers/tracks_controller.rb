@@ -1,4 +1,4 @@
-class TrackController < ApplicationController
+class TracksController < ApplicationController
     before_action :require_user!
 
     def show

@@ -1,4 +1,4 @@
-class AlbumController < ApplicationController
+class AlbumsController < ApplicationController
     before_action :require_user!
   
     def show
