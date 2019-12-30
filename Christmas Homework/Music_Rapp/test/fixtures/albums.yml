@@ -9,3 +9,17 @@ one: {}
 #
 two: {}
 # column: value
+
+# == Schema Information
+#
+# Table name: albums
+#
+#  id         :integer(8)      not null, primary key
+#  name       :string          not null
+#  band_id    :integer(4)      not null
+#  year       :integer(4)      not null
+#  live       :boolean         default("false"), not null
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
