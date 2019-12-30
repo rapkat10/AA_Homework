@@ -1,4 +1,4 @@
-<h1><%= @track.title %></h1>
+<h1><%= @track.name %></h1>
 
 <h4>Links</h4>
 <ul class='links'>
@@ -10,5 +10,5 @@
       <input type="submit" value="Destroy Track">
     </form>
   </li>
-  <li><a class='button' href="<%= album_url(@track.album) %>"><%= @track.album.title %></a></li>
+  <li><a class='button' href="<%= album_url(@track.album) %>"><%= @track.album.name %></a></li>
 </ul>

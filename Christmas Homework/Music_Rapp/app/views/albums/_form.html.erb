@@ -10,8 +10,8 @@
     value="<%= form_authenticity_token %>">
 
   <p>
-    <label for='album-title'>Title</label>
-    <input id='album-title' type="text" name="album[title]" value="<%= album.title %>">
+    <label for='album-name'>Name</label>
+    <input id='album-name' type="text" name="album[name]" value="<%= album.name %>">
   </p>
 
   <p>
@@ -34,14 +34,14 @@
       name="album[studio]"
       value="t"
       id="album_studio_t"
-      <%= "checked" if album.studio %>>
+      <%= "checked" if album.live %>>
     <label for="album_studio_f">Live</label>
     <input
       type="radio"
       name="album[studio]"
       value="f"
       id="album_studio_f"
-      <%= "checked" if !album.studio %>>
+      <%= "checked" if !album.live %>>
   </p>
 
   <p>
