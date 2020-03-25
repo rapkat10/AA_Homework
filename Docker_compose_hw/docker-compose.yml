@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  nginx:
+    build:
+      context: .
+    image: 072397/nginx
+    ports:
+      - 8081:80
